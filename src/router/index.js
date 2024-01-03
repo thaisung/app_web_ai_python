@@ -25,17 +25,17 @@ const router = createRouter({
           component: () => import("../views/DetailView.vue"),
         },
         {
-          path: "/gio-hang/",
+          path: "/gio-hang",
           name: 'gio_hang',
           component: () => import("../views/CartView.vue"),
         },
         {
-          path: "/thong-tin-tai-khoan/",
+          path: "/thong-tin-tai-khoan",
           name: 'thong_tin_tai_khoan',
           component: () => import("../views/InforView.vue"),
         },
         {
-          path: "/don-hang-da-dat/",
+          path: "/don-hang-da-dat",
           name: 'don-hang-da-dat',
           component: () => import("../views/OderView.vue"),
         },
