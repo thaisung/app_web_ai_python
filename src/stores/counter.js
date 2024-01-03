@@ -140,6 +140,9 @@ export const useCounterStore = defineStore("counter", {
       danh_muc_danh_sach: "",
       thong_tin_tai_khoan:false,
       danh_sach_san_pham_ai:'',
+      error_login:false,
+      error_register:false,
+      ss_register:false,
     };
   },
 
@@ -155,9 +158,11 @@ export const useCounterStore = defineStore("counter", {
           url: this.Domain_Backend + "/User/",
           data: this.dk,
         });
+        this.ss_register =! this.ss_register
       } catch (error) {
         console.log(error);
         this.thong_tin_user = error.response.data;
+        this.error_register =! this.error_register
       }
       this.dk={ email: "", username: "", password: "" };
     },
@@ -183,6 +188,7 @@ export const useCounterStore = defineStore("counter", {
       } catch (error) {
         console.log(error);
         this.thong_tin_user = error.response.data;
+        this.error_login =! this.error_login
       }
     },
     async dang_xuat() {

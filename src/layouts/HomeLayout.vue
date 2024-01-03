@@ -113,7 +113,7 @@
               type="password"
               autocomplete="current-password"
               required=""
-              class="mt-2 mb-3 block w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-black focus:ring-offset-1"
+              class="mt-2 block w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-black focus:ring-offset-1"
               placeholder="Mật khẩu"
             />
             <!-- <p class="mb-3 mt-2 text-sm text-gray-500">
@@ -123,10 +123,22 @@
                 >Đặt lại mật khẩu ?</a
               >
             </p> -->
+            <p
+              v-show="counter.error_register"
+              class="inline-flex w-full items-center mt-3 justify-center rounded-lg bg-red-500 p-2 py-3 text-sm font-medium text-white outline-none focus:ring-2 focus:ring-black focus:ring-offset-1 disabled:bg-gray-400"
+            >
+              Thông tin đăng ký không chính xác !
+            </p>
+            <p
+              v-show="counter.ss_register"
+              class="inline-flex w-full items-center mt-3 justify-center rounded-lg bg-green-500 p-2 py-3 text-sm font-medium text-white outline-none focus:ring-2 focus:ring-black focus:ring-offset-1 disabled:bg-gray-400"
+            >
+              Đăng ký thành công tài khoản
+            </p>
             <button
               v-on:click="counter.dang_ki()"
               type="submit"
-              class="inline-flex w-full items-center justify-center rounded-lg bg-black p-2 py-3 text-sm font-medium text-white outline-none focus:ring-2 focus:ring-black focus:ring-offset-1 disabled:bg-gray-400"
+              class="inline-flex mt-3 w-full items-center justify-center rounded-lg bg-black p-2 py-3 text-sm font-medium text-white outline-none focus:ring-2 focus:ring-black focus:ring-offset-1 disabled:bg-gray-400"
             >
               Tiếp tục
             </button>
@@ -249,16 +261,15 @@
               class="mt-2 block w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-black focus:ring-offset-1"
               placeholder="Mật khẩu"
             />
-            <p class="mb-3 mt-2 text-sm text-gray-500">
-              <a
-                href="/forgot-password"
-                class="text-blue-800 hover:text-blue-600"
-                >Đặt lại mật khẩu ?</a
-              >
+            <p
+              v-show="counter.error_login"
+              class="inline-flex w-full items-center mt-3 justify-center rounded-lg bg-red-500 p-2 py-3 text-sm font-medium text-white outline-none focus:ring-2 focus:ring-black focus:ring-offset-1 disabled:bg-gray-400"
+            >
+              Thông tin đăng nhập không chính xác !
             </p>
             <button
               v-on:click="counter.dang_nhap()"
-              class="inline-flex w-full items-center justify-center rounded-lg bg-black p-2 py-3 text-sm font-medium text-white outline-none focus:ring-2 focus:ring-black focus:ring-offset-1 disabled:bg-gray-400"
+              class="inline-flex w-full items-center mt-3 justify-center rounded-lg bg-black p-2 py-3 text-sm font-medium text-white outline-none focus:ring-2 focus:ring-black focus:ring-offset-1 disabled:bg-gray-400"
             >
               Tiếp tục
             </button>

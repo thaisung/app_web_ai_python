@@ -61,22 +61,6 @@ const router = createRouter({
         },
       ],
     },
-    // {
-    //   path: "/",
-    //   name: "loginregister",
-    //   redirect: "/",
-    //   component: LoginRegister,
-    //   children: [
-    //     {
-    //       path: "/dang-nhap",
-    //       component: () => import("../views/LoginRegister/LoginView.vue"),
-    //     },
-    //     {
-    //       path: "/dang-ki",
-    //       component: () => import("../views/LoginRegister/RegisterView.vue"),
-    //     },
-    //   ]
-    // },
   ],
   scrollBehavior() {
     window.scrollTo(0, 0);
