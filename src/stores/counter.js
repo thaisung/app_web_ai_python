@@ -257,6 +257,14 @@ export const useCounterStore = defineStore("counter", {
         })
       ).data;
     },
+    async product_page(a) {
+      this.san_pham_danh_sach = (
+        await axios({
+          method: "get",
+          url: a,
+        })
+      ).data;
+    },
     async F_tim_kiem_san_pham() {
       this.san_pham_danh_sach = (
         await axios({
