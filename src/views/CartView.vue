@@ -90,7 +90,7 @@
             </p>
           </div>
           <a
-            href="/don-hang-da-dat/"
+            href="/don-hang-da-dat"
             class="underline text-green-500 font-medium text-[16px] cursor-pointer"
             >Xem các đơn hàng đã đặt</a
           >
