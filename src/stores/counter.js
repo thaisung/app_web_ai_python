@@ -10,7 +10,7 @@ const Route = useRoute();
 export const useCounterStore = defineStore("counter", {
   state: () => {
     return {
-      Domain_Backend: "http://127.0.0.1:8000",
+      Domain_Backend: "https://hoclambientap.com",
       domain_Frontend: "",
       Path_Route: useRoute(),
       id_dh:useRoute().path.split('/')[useRoute().path.split('/').length - 1],
