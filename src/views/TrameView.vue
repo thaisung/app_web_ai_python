@@ -24,6 +24,7 @@
       </p>
       <div class="grid grid-cols-5 gap-4 w-full grow-0">
         <router-link
+          v-if="i && i.id"
           :to="`/chi-tiet/${i.id}`"
           v-for="(i, index) in counter.san_pham_danh_sach"
           :key="index"

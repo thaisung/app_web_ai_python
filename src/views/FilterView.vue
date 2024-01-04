@@ -24,7 +24,8 @@
       </p>
       <div class="grid grid-cols-5 gap-4 w-full grow-0">
         <router-link
-          :to="`/chi-tiet/${i.id}`"
+          v-if="i && i.id"
+          :to="'/chi-tiet/' + i.id"
           v-for="(i, index) in counter.san_pham_danh_sach"
           :key="index"
           v-on:click="counter.F_chi_tiet_san_pham(i.id)"
@@ -85,7 +86,7 @@
       <p class="py-4 font-bold text-[20px]">Sản phẩm gợi ý</p>
       <div class="grid grid-cols-5 gap-4 w-full">
         <router-link
-          :to="`/chi-tiet/${i.id}`"
+          :to="'/chi-tiet/' + i.id"
           v-for="(i, index) in counter.danh_sach_san_pham_ai"
           :key="index"
           v-on:click="counter.F_chi_tiet_san_pham(i.id)"
