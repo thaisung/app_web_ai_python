@@ -10,7 +10,7 @@
       <div class="grid grid-cols-5 gap-4 w-full grow-0">
         <router-link
           :to="`/chi-tiet/${i.id}`"
-          v-for="(i, index) in counter.san_pham_danh_sach"
+          v-for="(i, index) in counter.san_pham_danh_sach.data"
           :key="index"
           v-on:click="counter.F_chi_tiet_san_pham(i.id)"
           class="shadow-md flex flex-col items-center rounded-md py-2 px-2 hover:scale-105 cursor-pointer bg-white"

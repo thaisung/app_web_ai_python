@@ -89,7 +89,7 @@
       <p class="py-2 font-bold text-[20px]">Sản phẩm gợi ý</p>
       <div class="grid grid-cols-5 gap-4 w-full grow-0">
         <div
-          v-for="(i, index) in counter.san_pham_danh_sach"
+          v-for="(i, index) in counter.san_pham_danh_sach.data"
           :key="index"
           class="shadow-md flex flex-col items-center rounded-md py-2 px-2 hover:scale-105 cursor-pointer"
         >
